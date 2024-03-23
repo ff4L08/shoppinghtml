@@ -64,8 +64,8 @@ query = 'UPDATE users SET username = "tonton", password = "1212" WHERE id == 001
 cursor.execute(query)
 
 #delete
-query = 'DELETE FROM users WHERE id == 001'
-cursor.execute(query)
+# query = 'DELETE FROM users WHERE id == 001'
+# cursor.execute(query)
 
 #get all data
 cursor.execute('SELECT * FROM users')
@@ -78,3 +78,5 @@ query = 'SELECT p.name, p.price, c.name FROM products p LEFT JOIN categories c O
 cursor.execute(query)
 data = cursor.fetchall()
 print('product with category:', data)
+
+conn.commit()

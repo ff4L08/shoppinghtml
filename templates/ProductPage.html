@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width = device - width, initial - scale = 1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='ProductPage.css')}}">
+        <title> Sign In </title>
+    </head>
+
+    <body>
+        <nav>
+            <a href="/products">Product</a>
+            <a href="/categories">Categories</a>
+            <a href="#">Ysers</a>
+            <div>
+                <img src="./img/wed.jpg" 
+                alt=''
+                width='60px' 
+                height='60px'>
+                <p>TestUser1</p>
+            </div>
+
+        </nav>
+
+        <main>
+            <table>
+                <tr>
+                    <th> ID </th>
+                    <th> Image </th>
+                    <th> Product name </th>
+                    <th> Quantities </th>
+                    <th> Price </th>
+                    <th colspan="2"> Action </th>
+                </tr>
+                {% for row in rows %}
+                <tr>
+                    <td> {{row['id']}} </td>
+                    <td><img src="" alt=""> </td>
+                    <td> {{row['name']}} </td>
+                    <td> {{row['quantities']}} </td>
+                    <td> {{row['price']}} </td>
+                    <td> Edit </td>
+                    <td> Delete </td>
+                </tr>
+                
+                {% endfor %}
+            </table>
+        </main>
+
+    </body>
+</html>

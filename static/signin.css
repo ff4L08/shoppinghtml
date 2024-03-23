@@ -1,0 +1,38 @@
+* {
+    padding: 20;
+    margin: 0;
+}
+
+input {
+    width: 17%;
+    height: 30px;
+    border: 2px solid darkgray;
+    border-radius: 50px;
+    padding-left: 8px;
+}
+
+a {
+    width: 5%;
+    height: 20px;
+    display: block;
+    border: 2px solid darkgray;
+    border-radius: 3px;
+    padding: 3px 5px 2px 5px;
+    margin: auto;
+
+}
+
+img{
+    position: absolute;
+    
+}
+
+div{
+    position: relative;
+    background-color: #ffffff90;
+    border-radius: 4px;
+    width: 50%;
+    text-align: center;
+    padding-block: 200px;
+    margin: auto;    
+}

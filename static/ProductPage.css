@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+
+    transition: 500ms;
+}
+
+nav a:hover{
+    color: brown;
+    transition: 400ms;
+}
+
+.usertab {
+    display: flex;
+    align-items: center;
+}
+
+.usertab img {
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    align-self: center;
+}
+
+td, th {
+    border: 1px solid black;
+    height: 24px;
+}

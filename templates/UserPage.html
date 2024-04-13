@@ -27,22 +27,19 @@
             <table>
                 <tr>
                     <th> ID </th>
-                    <th> Image </th>
-                    <th> Product name </th>
-                    <th> Quantities </th>
-                    <th> Price </th>
-                    <th colspan="2"> Action </th>
+                    <th> Username </th>
+                    <th> Password </th>
+                    <th colspan="3"> Action </th>
                 </tr>
                 
                 {% for row in rows %}
                 <tr>
                     <td> {{row['id']}} </td>
-                    <td><img src="" alt=""> </td>
-                    <td> {{row['name']}} </td>
-                    <td> {{row['quantities']}} </td>
-                    <td> {{row['price']}} </td>
-                    <td><a href="{{url_for('EditProductPage', id = row['id'])}}">Edit</a></td>
-                    <td><a href="{{url_for('deleteEntry', id = row['id'])}}">Delete</a></td>
+                    <td> {{row['username']}} </td>
+                    <td> {{row['password']}} </td>
+                    <td><a href="{{url_for('EditUser', id = row['id'], type='USERNAME')}}">Edit Username</a></td>
+                    <td><a href="{{url_for('EditUser', id = row['id'], type='PASSWORD')}}">Edit Password</a></td>
+                    <td><a href="{{url_for('deleteUser', id = row['id'])}}">Delete</a></td>
                 </tr>
                 
                 {% endfor %}

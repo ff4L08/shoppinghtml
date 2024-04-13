@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width = device - width, initial - scale = 1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='signin.css')}}">
+        <title> Sign In </title>
+    </head>
+
+    <body>
+        {% if id and type == 'USERNAME' %}
+        <form action="/users/edit/{{id}}/{{type}}" method="post">
+            <input placeholder="Username" name="username"/>
+            <button type="submit">
+            <p>Edit</p>
+            </button>
+        </form>
+
+        {% elif id and type == 'PASSWORD' %}
+        <form action="/users/edit/{{id}}/{{type}}" method="post">
+            <input placeholder="Password" name="password"/>
+            <button type="submit">
+            <p>Edit</p>
+            </button>
+        </form>
+
+        {% else %}
+        <form action="/users/add" method="post">
+            <input placeholder="Name" name="name"/>
+            <input placeholder="Quantity" style="margin-bottom: 20px" name="quantities"/>
+            <input placeholder="Price" style="margin-bottom: 20px" name="price"/>
+            <button type="submit">
+            <p>Add</p>
+            </button>
+        </form>
+
+        {% endif %}
+    </body>
+</html>

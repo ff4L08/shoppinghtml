@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width = device - width, initial - scale = 1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='signin.css')}}">
+        <title> Sign In </title>
+    </head>
+
+    <body>
+        {% if id %}
+        <form action="/products/edit/{{id}}" method="post">
+            <input placeholder="Name" name="name"/>
+            <input placeholder="Quantity" style="margin-bottom: 20px" name="quantities"/>
+            <input placeholder="Price" style="margin-bottom: 20px" name="price"/>
+            <button type="submit">
+            <p>Edit</p>
+            </button>
+        </form>
+
+        {% else %}
+        <form action="/products/add" method="post">
+            <input placeholder="Name" name="name"/>
+            <input placeholder="Quantity" style="margin-bottom: 20px" name="quantities"/>
+            <input placeholder="Price" style="margin-bottom: 20px" name="price"/>
+            <button type="submit">
+            <p>Add</p>
+            </button>
+        </form>
+
+        {% endif %}
+    </body>
+</html>

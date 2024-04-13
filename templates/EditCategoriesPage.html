@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset= "UTF-8">
+        <meta name="viewport" content="width = device - width, initial - scale = 1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='signin.css')}}">
+        <title> Sign In </title>
+    </head>
+
+    <body>
+        {% if id %}
+        <form action="/categories/edit/{{id}}" method="post">
+            <input placeholder="Name" name="name"/>
+            <button type="submit">
+            <p>Edit</p>
+            </button>
+        </form>
+
+        {% else %}
+
+        <form action="/categories/add" method="post">
+            <input placeholder="Name" name="name"/>
+            <button type="submit">
+            <p>Add</p>
+            </button>
+        </form>
+
+        {% endif %}
+    </body>
+</html>

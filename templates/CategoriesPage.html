@@ -11,7 +11,7 @@
         <nav>
             <a href="/products">Product</a>
             <a href="/categories">Categories</a>
-            <a href="#">Ysers</a>
+            <a href="/users">Ysers</a>
             <div>
                 <img src="./img/wed.jpg" 
                 alt=''
@@ -23,6 +23,7 @@
         </nav>
 
         <main>
+            <a href="{{url_for('AddCategoryPage')}}">ADD</a>
             <table>
                 <tr>
                     <th> ID </th>
@@ -30,12 +31,15 @@
                     <th colspan="2"> Action </th>
                 </tr>
 
+                {% for row in rows %}
                 <tr>
-                    <th> 1 </th>
-                    <th> Test product </th>
-                    <th> Edit </th>
-                    <th> Delete </th>
+                    <td> {{row['id']}} </td>
+                    <td> {{row['name']}} </td>
+                    <td><a href="{{url_for('EditCategoriesPage', id = row['id'])}}">Edit</a></td>
+                    <td><a href="{{url_for('deleteCategory', id = row['id'])}}">Delete</a></td>
                 </tr>
+                
+                {% endfor %}
 
             </table>
         </main>
